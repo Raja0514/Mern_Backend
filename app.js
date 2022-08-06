@@ -20,18 +20,18 @@ app.use(express.json());
 app.use(morgan('dev'))
 
 //router
-const router=require('./Routes/router0')
-app.use('/router0',router)
+const test1=require('./Routes/router0')
+app.use('/router0',test1)
 
-const router1=require('./Routes/router1')
-app.use('/router1',router1)
+const test2=require('./Routes/router1')
+app.use('/router1',test2)
 
 
-const router2=require('./Routes/router2')
-app.use('/router2',router2)
+const test3=require('./Routes/router2')
+app.use('/router2',test3)
 
-const router3=require('./Routes/router3')
-app.use('/router3',router3)
+const test4=require('./Routes/router3')
+app.use('/router3',test4)
 
 
 
