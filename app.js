@@ -4,12 +4,11 @@ const cors = require("cors");
 const app = express();
 const morgan=require('morgan')
 
-const port=process.env.PORT||3000;
+const port=process.env.PORT||"3003";
 
 //Cors
-const corsOptions = {origin: "*",credentials: true,  optionSuccessStatus: 200,};
 //access-control-allow-credentials:true
-app.use(cors(corsOptions)); // Use this after the variable declaration
+app.use(cors()); // Use this after the variable declaration
 
 //Server Creation
 app.listen(port , () => console.log("server running....."));
@@ -22,7 +21,7 @@ app.use(express.json());
 app.use(morgan('dev'))
 
 app.get('/',(req,res)=>{
-    res.send("run....")
+    res.send("server running")
 })
 
 //router

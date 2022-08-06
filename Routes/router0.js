@@ -1,7 +1,7 @@
 //jWt
 const jwt = require("jsonwebtoken");
 //bcrypt
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 //model
 const model = require("../Model/model");
 //router
@@ -11,7 +11,6 @@ const router = express.Router();
 
 
 //Register
-
 router.post("/register", async (req, res) => {
   try {
     let existinguser = await model.findOne({ email: req.body.email });
