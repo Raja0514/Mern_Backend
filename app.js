@@ -19,6 +19,10 @@ const connection = require("./DB/mongoose");
 app.use(express.json());
 app.use(morgan('dev'))
 
+app.get('/',(req,res)=>{
+    res.send("run....")
+})
+
 //router
 const test1=require('./Routes/router0')
 app.use('/router0',test1)
