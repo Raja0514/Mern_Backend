@@ -4,13 +4,15 @@ const cors = require("cors");
 const app = express();
 const morgan=require('morgan')
 
+const port=process.env.PORT||3000;
+
 //Cors
 const corsOptions = {origin: "*",credentials: true,  optionSuccessStatus: 200,};
 //access-control-allow-credentials:true
 app.use(cors(corsOptions)); // Use this after the variable declaration
 
 //Server Creation
-app.listen(process.env.PORT||5000, () => console.log("server running....."));
+app.listen(port , () => console.log("server running....."));
 
 // DB Connection
 const connection = require("./DB/mongoose");
