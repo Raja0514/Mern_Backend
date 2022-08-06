@@ -10,11 +10,7 @@ const corsOptions = {origin: "*",credentials: true,  optionSuccessStatus: 200,};
 app.use(cors(corsOptions)); // Use this after the variable declaration
 
 //Server Creation
-
-const port=process.env.PORT||8080;
-
-
-app.listen(port, () => console.log("server running....."));
+app.listen(process.env.PORT||8080, () => console.log("server running....."));
 
 // DB Connection
 const connection = require("./DB/mongoose");
